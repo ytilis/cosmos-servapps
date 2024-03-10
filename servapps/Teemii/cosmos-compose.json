@@ -1,0 +1,52 @@
+{
+    "cosmos-installer": {},
+    "minVersion": "0.9.0",
+    "services": {
+        "{ServiceName}-frontend": {
+            "image": "dokkaner/teemii-frontend:latest",
+            "container_name": "{ServiceName}-frontend",
+            "restart": "unless-stopped",
+            "environment": [
+                "VITE_APP_TITLE=Teemii",
+                "VITE_APP_PORT=80"
+            ],
+            "labels": {
+                "cosmos-force-network-secured": "true",
+                "cosmos-auto-update": "true",
+                "cosmos-icon": "https://ytilis.github.io/cosmos-servapps/Teemii/icon.png"
+            },
+            "routes": [{
+                "name": "{ServiceName}",
+                "description": "Expose {ServiceName} to the web",
+                "useHost": true,
+                "target": "http://{ServiceName}:8080",
+                "mode": "SERVAPP",
+                "Timeout": 14400000,
+                "ThrottlePerMinute": 12000,
+                "BlockCommonBots": true,
+                "SmartShield": {
+                    "Enabled": true
+                }
+            }]
+        },
+        "{ServiceName}-backend": {
+            "image": "dokkaner/teemii-backend:latest",
+            "container_name": "{ServiceName}-backend",
+            "restart": "unless-stopped",
+            "environment": [
+                "EXPRESS_PORT=3000",
+                "SOCKET_IO_PORT=1555"
+            ],
+            "labels": {
+                "cosmos-force-network-secured": "true",
+                "cosmos-auto-update": "true",
+                "cosmos-icon": "https://ytilis.github.io/cosmos-servapps/Teemii/icon.png"
+            },
+            "volumes": [{
+                "source": "{ServiceName}-data",
+                "target": "/data",
+                "type": "volume"
+            }]
+        }
+    }
+}

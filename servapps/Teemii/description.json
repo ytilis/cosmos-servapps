@@ -1,0 +1,9 @@
+{
+    "name": "Teemii",
+    "longDescription": "<p>A versatile, self-hosted manga reader and manager with extensible agent-based metadata retrieval.</p>",
+    "description": "A versatile, self-hosted manga reader and manager with extensible agent-based metadata retrieval.",
+    "tags": ["manga", "library", "reader", "web interface", "management", "reading"],
+    "repository": "https://github.com/dokkaner/teemii/",
+    "image": "https://hub.docker.com/r/dokkaner/teemii-backend",
+    "supported_architectures": ["amd64", "arm64"]
+}
