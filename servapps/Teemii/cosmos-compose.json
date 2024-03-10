@@ -13,7 +13,9 @@
         "labels": {
           "cosmos-force-network-secured": "true",
           "cosmos-auto-update": "true",
-          "cosmos-icon": "https://ytilis.github.io/cosmos-servapps/Teemii/icon.png"
+          "cosmos-icon": "https://ytilis.github.io/cosmos-servapps/Teemii/icon.png",
+          "cosmos-stack": "{ServiceName}",
+          "cosmos-stack-main": "{ServiceName}"
         },
         "networks": {
           "{ServiceName}-network": {}
@@ -46,7 +48,9 @@
         "labels": {
           "cosmos-force-network-secured": "true",
           "cosmos-auto-update": "true",
-          "cosmos-icon": "https://ytilis.github.io/cosmos-servapps/Teemii/icon.png"
+          "cosmos-icon": "https://ytilis.github.io/cosmos-servapps/Teemii/icon.png",
+          "cosmos-stack": "{ServiceName}",
+          "cosmos-stack-main": "{ServiceName}"
         },
         "networks": {
           "{ServiceName}-network": {}
