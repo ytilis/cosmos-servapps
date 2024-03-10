@@ -2,9 +2,9 @@
     "cosmos-installer": {
       "form": [
         {
-          "name": "config",
+          "name": "providerConfig",
           "label": "DDNS Provider config",
-          "initialValue": "{ \"settings\": [ ] }",
+          "initialValue": "",
           "type": "text"
         }
       ]
@@ -16,7 +16,9 @@
         "container_name": "{ServiceName}",
         "restart": "unless-stopped",
         "environment": [
-          "CONFIG={Context.config}",
+          {if Context.providerConfig}
+            "CONFIG={Context.providerConfig}",
+          {/if}
           "PERIOD=5m",
           "UPDATE_COOLDOWN_PERIOD=5m",
           "PUBLICIP_FETCHERS=all",
