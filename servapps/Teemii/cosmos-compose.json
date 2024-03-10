@@ -2,7 +2,7 @@
     "cosmos-installer": {},
     "minVersion": "0.9.0",
     "services": {
-        "{ServiceName}-frontend": {
+        "{ServiceName}": {
             "image": "dokkaner/teemii-frontend:latest",
             "container_name": "{ServiceName}-frontend",
             "restart": "unless-stopped",
@@ -54,5 +54,10 @@
                 "type": "volume"
             }]
         }
+    },
+  
+    "networks": {
+      "{ServiceName}-network": {
+      }
     }
 }
