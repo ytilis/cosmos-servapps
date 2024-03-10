@@ -8,7 +8,7 @@
             "restart": "unless-stopped",
             "environment": [
                 "VITE_APP_TITLE=Teemii",
-                "VITE_APP_PORT=80"
+                "VITE_APP_PORT=8080"
             ],
             "labels": {
                 "cosmos-force-network-secured": "true",
@@ -29,7 +29,8 @@
                 "BlockCommonBots": true,
                 "SmartShield": {
                     "Enabled": true
-                }
+                },
+                "AuthEnabled": true
             }]
         },
         "{ServiceName}-backend": {
