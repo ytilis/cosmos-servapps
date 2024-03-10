@@ -15,6 +15,9 @@
                 "cosmos-auto-update": "true",
                 "cosmos-icon": "https://ytilis.github.io/cosmos-servapps/Teemii/icon.png"
             },
+            "networks": {
+              "{ServiceName}-network": {}
+            },
             "routes": [{
                 "name": "{ServiceName}",
                 "description": "Expose {ServiceName} to the web",
@@ -41,6 +44,9 @@
                 "cosmos-force-network-secured": "true",
                 "cosmos-auto-update": "true",
                 "cosmos-icon": "https://ytilis.github.io/cosmos-servapps/Teemii/icon.png"
+            },
+            "networks": {
+              "{ServiceName}-network": {}
             },
             "volumes": [{
                 "source": "{ServiceName}-data",
